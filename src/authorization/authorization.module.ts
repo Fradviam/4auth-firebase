@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { RolesController } from './controllers/roles.controller';
+import { RolesController } from '../../../../develop/greco/ts-learning/src/authorization/controllers/roles.controller';
 import { RolesService } from './services/roles.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Role } from './entities/role.entity';
-import { PermissionsController } from './controllers/permissions.controller';
+import { PermissionsController } from '../../../../develop/greco/ts-learning/src/authorization/controllers/permissions.controller';
 import { PermissionsService } from './services/permissions.service';
 import { Permission } from './entities/permission.entity';
 

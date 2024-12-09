@@ -14,9 +14,9 @@ import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConne
           type: 'postgres',
           host: configService.database.host,
           port: +configService.database.port,
-          username: configService.database.user,
+          username: configService.database.username,
           password: configService.database.password,
-          database: configService.database.name,
+          database: configService.database.database,
           entities: [__dirname + '/../**/*.entity{.ts,.js}'],
           synchronize: false,
         };

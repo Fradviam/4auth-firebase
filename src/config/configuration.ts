@@ -1,17 +1,16 @@
 import { registerAs } from '@nestjs/config';
+import * as process from 'process';
 
 export default registerAs('configuration', () => {
   return {
     port: parseInt(process.env.PORT, 10) || 3000,
     database: {
-      host: process.env.DATABASE_HOST,
-      port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
-      name: process.env.DATABASE_NAME,
-      user: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PASSWORD,
-    },
-    sentry: {
-      dsn: process.env.SENTRY_DSN,
-    },
+      host: process.env.HOST,
+      port: +process.env.DB_PORT,
+      database: process.env.DB_NAME,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+    }
+
   };
 });

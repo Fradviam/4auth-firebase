@@ -8,11 +8,11 @@ const configService = new ConfigService();
 
 export default new DataSource({
   type: 'postgres',
-  host: configService.get('DATABASE_HOST'),
-  port: +configService.get('DATABASE_PORT'),
-  username: configService.get('DATABASE_USER'),
-  password: configService.get('DATABASE_PASSWORD'),
-  database: configService.get('DATABASE_NAME'),
+  host: configService.get('HOST'),
+  port: +configService.get('DB_PORT'),
+  username: configService.get('DB_USERNAME'),
+  password: configService.get('DB_PASSWORD'),
+  database: configService.get('DB_NAME'),
   entities: ['./src/**/entities/*.ts'],
   migrations: ['src/database/migrations/*.ts'],
 });

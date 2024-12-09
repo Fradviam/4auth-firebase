@@ -9,7 +9,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { AuthenticationService } from './authentication.service';
 import { SignInDto } from './dto/sign-in.dto';
-import { Public } from './decotators/public.decorator';
+import { Public } from '../../../../develop/greco/ts-learning/src/authentication/decorators/public.decorator';
 import { SentryInterceptor } from 'src/common/interceptors/sentry.interceptor';
 
 @ApiTags('Login')

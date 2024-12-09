@@ -12,7 +12,7 @@ export class Role {
   description?: string;
 
   @Column({ default: false })
-  isAdmin: boolean
+  isAdmin: boolean;
 
   @CreateDateColumn({
     name: 'createdAt',
